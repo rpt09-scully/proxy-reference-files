@@ -2,112 +2,63 @@
 <html lang="en-US">
 
 <head>
-
-  <!-- Bootstrap Required & recommended minimum meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-  <!-- Name of web application (only should be used if the website is used as an app) -->
   <meta name="application-name" content="Nine Trails FEC - Team Scully">
-
-  <!-- Short description of the document (limit to 150 characters) -->
-  <!-- This content *may* be used as a part of search engine results. -->
   <meta name="description" content="Nine Trails - Explore Trails Near You.">
-
-  <!-- Control the behavior of search engine crawling and indexing -->
   <meta name="robots" content="noindex,nofollow"><!-- All Search Engines -->
   <meta name="googlebot" content="noindex,nofollow"><!-- Google Specific -->
-
-  <!-- Short description of your document's subject -->
   <meta name="subject" content="Local hiking trail.">
-
-  <!-- Helps prevent duplicate content issues -->
   <link rel="canonical" href="http://localhost:3001/"> <!-- TODO: Add URL -->
-
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" 
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
     crossorigin="anonymous">
-
-  <!-- TODO: WIP css for discussion -->
-  <link rel="stylesheet" href="./style.css">
-
-
-
+  <link rel="stylesheet" href="./css/style.css">
 </head>
 
-<!-- TODO: Refactor to mvp layout -->
-<!-- Bootstrap’s grid system uses a series of containers, rows, and
-columns to layout and align content. It’s built with flexbox and is
-fully responsive. -->
-
 <body>
-  <!-- Use .container for a responsive pixel width or
-  .container-fluid for width: 100% across all viewport and device
-  sizes. -->
   <div class="container">
-
-    <!-- Rows are wrappers for columns -->
-    <!-- In a grid layout, content must be placed within columns and
-    only columns may be immediate children of rows. -->
-
+    <div id='menu' class="row justify-content-center">
+      <ul id='menu_left' class='row flex-row justify-content-between col-sm-12 col-md-5 col-lg-4 text-left'> 
+        <li><a href='#'>Explore</a></li>
+        <li><a href='#'>Plan</a></li>
+        <li><a href='#'>History</a></li>
+      </ul>
+      <div id='header' class='col-sm-12 col-md-2 col-lg-4'>
+       9 TRAILS
+      </div>
+      <div id='menu_right' class='row flex-row-reverse col-sm-12 col-md-5 col-lg-4'>
+        <div id='user_menu'  class='col-5'>
+            <ul  class='row flex-row justify-content-between text-right '> 
+              <li><a href='#'>Sign Up</a></li>
+              <li><a href='#'>Login</a></li>
+            </ul>  
+          </div>
+        <div id='search_bar_wpr' class='col-7'>
+          <input id='search_bar' type='text' placeholder='Search..'>
+        </div>
+       
+      </div>
+    </div> 
     <div class="row">
-      <!-- Header top row-->
-
-      <div class="col">Explore
-      </div>
-      <div class="col">
-        Plan
-      </div>
-      <div class="col">
-        History
-      </div>
-      <div class="col-3">
-        Scully Nine Trails Rocks
-      </div>
-      <div class="col">
-        Help
-      </div>
-      <div class="col">
-        Sign Up
-      </div>
-      <div class="col">
-        Log In
-      </div>
-
-    </div> <!-- Header top row -->
-
-    <div class="row">
-      <!-- Header bottom row-->
-
-      <div class="col-8">BREADCRUMBS GO HERE</div>
-      <div class="col-4">SEARCH BOX GOES HERE</div>
-
-    </div> <!-- Header bottom row -->
-
-    <!-- Row for main content -->
-    <div class="row justify-content-center">
-      <!-- Main content wrapper column -->
-      <div class="wrapper col-9">
-
-        <div>CONTENT HERE</div>
-
-      </div> <!-- Main content wrapper -->
-
+      <div class="d-none d-lg-block col-8  justify-left">BREADCRUMBS > GO > HERE</div>
     </div>
-
-
+    <div id='main' class="row justify-content-center">
+        <div id='banner' class='row flex-row justify-content-center col-12'>
+          <div id='bubble_menu' class='row flex-row justify-content-around'>
+            <div class='bubble'></div>
+            <div class='bubble'></div>
+            <div class='bubble d-none d-lg-flex'></div>
+            <div class='bubble d-none d-lg-flex'></div>
+            <div class='bubble d-none d-lg-flex'></div>
+            <div class='bubble'></div>
+          </div>
+        </div>
+    </div>
   </div> <!-- Container -->
-
-
-  <!-- Optional Bootstrap JavaScript -->
-  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" 
+    integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
     crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-    crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
-    crossorigin="anonymous"></script>
-
 </body>
 
 </html>
