@@ -14,12 +14,12 @@
 }
 
 body {
-  background-color: #c0c0c0;
+  background-color: #fff;
 }
 
 .container {
   background: #fff;
-  max-width: 1440px;
+  max-width: 2600px;
   min-height: 100vh;
 }
 
