@@ -1,0 +1,4 @@
+../../../paths-service > npm run server-dev
+../../../reviews-service > npm run server-dev
+../../../trail-service > npm run server-dev
+../../../not-a-service > npm run server-dev
