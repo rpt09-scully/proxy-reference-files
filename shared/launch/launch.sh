@@ -32,6 +32,9 @@ listOfNPMDirsFile="./npmDirs.txt"
 # ----------------------
 if [ -f "$listOfNPMDirsFile" ]
     then
+        # KILL NODE . SAWRY
+        echo "murdering node...sawry..."
+        killall node
         while IFS= read -r entry;do
             #get pieces 
             dir="$(echo $entry | cut -d'>' -f 1 | xargs)";
@@ -40,6 +43,7 @@ if [ -f "$listOfNPMDirsFile" ]
                 then
                     # make a message
                     echo "starting '$task' in '$dir'..."
+                    sleep 1s
                        osascript 2>/dev/null <<EOF
                         tell application "System Events"
                           tell process "Terminal" to keystroke "t" using command down
