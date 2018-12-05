@@ -74,33 +74,3 @@ EOF
         echo "[empty line]"
         echo
 fi
-
-# function tab() {
-#   while read hostname
-#   do
-#   {
-#     osascript 2>/dev/null <<EOF
-#     tell application "System Events"
-#       tell process "Terminal" to keystroke "t" using command down
-#     end
-#     tell application "Terminal"
-#       activate
-#       #do script with command "cd \"$PWD\"; $*" in window 1
-#       do script with command "ssh root@$hostname" in window 1
-#     end tell
-# EOF
-#   }
-#   done < "$1"
-# }
-#    osascript 2>/dev/null <<EOF
-#     tell application "System Events"
-#       tell process "Terminal" to keystroke "t" using command down
-#     end
-#     tell application "Terminal"
-#       activate
-#       #do script with command "cd \"$PWD\"; $*" in window 1
-#       do script with command "ssh root@$hostname" in window 1
-#     end tell
-# EOF
-
-# tab 'filename.txt
