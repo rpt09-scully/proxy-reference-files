@@ -27,16 +27,16 @@
 # ----------------------
 #1 folder per line of url to download
 listOfNPMDirsFile="./npmDirs.txt"
-
+ABSDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null && pwd )"
 # DONT EDIT
 # ----------------------
-if [ -f "$listOfNPMDirsFile" ]
+if [ -f "$ABSDIR/$listOfNPMDirsFile" ]
     then
         while IFS= read -r entry;do
             #get pieces 
             dir="$(echo $entry | cut -d'>' -f 1 | xargs)";
             task="$(echo $entry | cut -d'>' -f 2 | xargs)";
-                if [ -d "$dir" ]
+                if [ -d "$ABSDIR/$dir" ]
                 then
                     # make a message
                     echo "starting '$task' in '$dir'..."
@@ -52,18 +52,18 @@ if [ -f "$listOfNPMDirsFile" ]
                         tell application "Terminal"
                           activate
                           #do script
-                          do script with command "cd '$PWD/$dir' && $task" in window 1
+                          do script with command "cd '$ABSDIR/$dir' && $task" in window 1
                         end tell
 EOF
                 else
                     echo "$dir does not exist...skipping."
                 fi
                   
-        done < "$listOfNPMDirsFile"
+        done < "$ABSDIR/$listOfNPMDirsFile"
     else
         echo
         echo 
-        echo "npmDirs.txt file must be in this same directory. Each line represents the relative path of npm directory with a > cmd"
+        echo "npmDirs.txt file must be in this same directory as $ABSDIR. Each line represents the relative path of npm directory with a > cmd"
         echo "also end with an empty line!"
         echo 
         echo "[path/to/npmDir] --> [cmd] "
