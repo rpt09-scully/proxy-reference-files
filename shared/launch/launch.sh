@@ -28,6 +28,7 @@
 #1 folder per line of url to download
 listOfNPMDirsFile="./npmDirs.txt"
 ABSDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null && pwd )"
+count=0 
 # DONT EDIT
 # ----------------------
 if [ -f "$ABSDIR/$listOfNPMDirsFile" ]
@@ -38,21 +39,16 @@ if [ -f "$ABSDIR/$listOfNPMDirsFile" ]
             task="$(echo $entry | cut -d'>' -f 2 | xargs)";
                 if [ -d "$ABSDIR/$dir" ]
                 then
+                    count=$((count + 1))
+
                     # make a message
-                    echo "starting '$task' in '$dir'..."
+                    echo "(Task #$count) starting '$task'in '$dir'..."
                     sleep 1s
                        osascript 2>/dev/null <<EOF
-                       tell application "Terminal"
-                            activate
-                        end tell
-                        delay 1
-                        tell application "System Events"
-                          tell process "Terminal" to keystroke "t" using command down
-                        end
                         tell application "Terminal"
-                          activate
+                           activate
                           #do script
-                          do script with command "cd '$ABSDIR/$dir' && $task" in window 1
+                          do script "cd '$ABSDIR/$dir' && $task"
                         end tell
 EOF
                 else
