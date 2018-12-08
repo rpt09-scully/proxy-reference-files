@@ -35,9 +35,16 @@ if [ -f "$ABSDIR/$listOfNPMDirsFile" ]
     then
         while IFS= read -r entry;do
             #get pieces 
+            entry="$(echo $entry | xargs)";
             dir="$(echo $entry | cut -d'>' -f 1 | xargs)";
             task="$(echo $entry | cut -d'>' -f 2 | xargs)";
-                if [ -d "$ABSDIR/$dir" ]
+            if [ -z "$entry" ]
+                then
+                    continue
+            elif [[ $entry == "#"* ]] 
+                then
+                    continue
+            elif [ -d "$ABSDIR/$dir" ]
                 then
                     count=$((count + 1))
 
