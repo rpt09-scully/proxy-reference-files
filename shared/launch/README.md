@@ -68,7 +68,7 @@ so in that package.json i have set the launcher here to easily run with `npm run
 ``` js
 {
   "scripts": {
-    "launchServices": "./proxy-reference-files/shared/launch/launch.sh",
+    "launchServices": "killall Terminal & killall -9 node & ./proxy-reference-files/shared/launch/launch.sh",
   }
 }
 ```
