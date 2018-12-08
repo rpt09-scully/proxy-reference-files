@@ -2,9 +2,10 @@
 ../../../chris-proxy-service > npm run server-dev
 
 # put services here!
-../../../paths-service > npm run server-dev
-../../../reviews-service > npm run server-dev
 ../../../trail-service > npm run server-dev
+../../../profile-service > npm start
 ../../../trail-photos-service > npm run startWeb
+../../../reviews-service > npm run server-dev
+../../../paths-service > npm run server-dev
 
 # remember an empty line (so this here for convenience)
