@@ -190,7 +190,6 @@
       Object.keys(window.NT[serviceKey]).forEach((widgetKey) => {
         const dom_id = `9Trails.${serviceKey}.${widgetKey}`;
         const currentWidget = window.NT[serviceKey][widgetKey];
-        debugger;
         ReactDOM.render(React.createElement(currentWidget), document.getElementById(dom_id));
       });
     });
