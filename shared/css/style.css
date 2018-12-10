@@ -92,8 +92,9 @@ body {
   min-height: 200px;
 }
 
-.servicePlaceholder.noBG {
-  background: #fff;
+.widgetWrapper {
+  margin: 40px 0 ;
+  min-height: 200px;
 }
 
 #tab_content {
