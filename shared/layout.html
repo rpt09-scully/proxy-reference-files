@@ -197,9 +197,31 @@
     Object.keys(window.NT).forEach((serviceKey) => {
       // now get service object
       Object.keys(window.NT[serviceKey]).forEach((widgetKey) => {
-        const dom_id = `9Trails.${serviceKey}.${widgetKey}`;
-        const currentWidget = window.NT[serviceKey][widgetKey];
-        ReactDOM.render(React.createElement(currentWidget), document.getElementById(dom_id));
+        try {
+          const dom_id = `9Trails.${serviceKey}.${widgetKey}`;
+          const currentWidget = window.NT[serviceKey][widgetKey];
+          ReactDOM.render(React.createElement(currentWidget), document.getElementById(dom_id));
+          // success
+          console.log(`
+          /////////////////////////////////////////////////////
+
+          ✅ ${serviceKey}.${widgetKey}
+          
+          /////////////////////////////////////////////////////
+          `);
+        } catch (e) {
+          // error 
+          console.log(`
+          /////////////////////////////////////////////////////
+
+          ❌ ${serviceKey}.${widgetKey}
+          An error occurred: ${e}
+          
+          /////////////////////////////////////////////////////
+          `);
+          // output
+          console.error( `Error for ${serviceKey}.${widgetKey}`, e);
+        }
       });
     });
   </script>
