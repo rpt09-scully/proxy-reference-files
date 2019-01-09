@@ -172,13 +172,24 @@ body {
 }
 
 #tab_content {
-  padding: 0 2.0rem 0 2rem;
+  padding: 3.0rem 2.0rem 0 2rem;
   padding-bottom: 50px;
 }
 
 .tab-pane .servicePlaceholder {
   margin: 10px 0;
 }
+
+.nav-tabs a.nav-link {
+  color: #000;
+  
+}
+
+.nav-tabs a.nav-link:hover {
+  color: #ed4d4d;
+  
+}
+
 
 .tab-pane {
   margin-top: 15px;
