@@ -12,8 +12,7 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" 
     integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
     crossorigin="anonymous">
-  <!-- todo: ryan ruse css modules -->
-  <!-- <link rel="stylesheet" href="http://localhost:3004/style.css"> -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
   <link rel="stylesheet" href="./css/style.css">
   
 </head>
@@ -21,29 +20,40 @@
 <body>
   <div class="container-fluid">
     <div id='menu' class="row justify-content-center">
-      <ul id='menu_left' class='row flex-row justify-content-around col-sm-12 col-md-5 col-lg-4 text-left'> 
+      <div id='menu_left' class='row flex-row col-4 col-md-5 text-left'> 
+        <div class='icon hamburger-icon mobile-and-lower'>
+          <i class="fas fa-bars"></i>
+        </div>
+        <ul id='main_menu' class="tablet row flex-row">
         <li><a href='#'>Explore</a></li>
         <li><a href='#'>Plan</a></li>
         <li><a href='#'>History</a></li>
-      </ul>
-      <div id='header' class='col-sm-12 col-md-2 col-lg-4'>
+        </ul>
+      </div>
+      <div id='header' class='col-4 col-md-2'>
        9 TRAILS
       </div>
-      <div id='menu_right' class='row flex-row-reverse col-sm-12 col-md-5 col-lg-4'>
-        <div id='user_menu'  class='col-5'>
-            <ul  class='row flex-row justify-content-around text-right '> 
-              <li><a href='#'>Sign Up</a></li>
-              <li><a href='#'>Login</a></li>
-            </ul>  
-          </div>
-        <div id='search_bar_wpr' class='col-7'>
-          <input id='search_bar' type='text' placeholder='Search..'>
+      <div id='menu_right' class='row flex-row col-4 col-md-5 justify-content-end text-right align-items-center'>
+        <div id='user_menu' class="row flex-row justify-content-end align-items-center">
+        <div class='icon user-icon tablet-and-lower'>
+          <i class="fas fa-user"></i>
         </div>
-       
+        <ul id='user_profile' class='desktop col-12 col-sm-6 row flex-row justify-content-end align-items-center'>
+          <li><a href='#'>Sign Up</a></li>
+          <li><a href='#'>Login</a></li>
+        </ul>  
+        <div class='icon search-icon mobile-and-lower'>
+          <i class="fas fa-search"></i>
+        </div>
+            <div id='search_bar_wpr' class='tablet col-12 col-sm-6'>
+              <input id='search_bar' type='text' placeholder='Search..'>
+            </div>
+        </div>
+
       </div>
     </div> 
     <div class="row">
-      <div class="d-none d-lg-block col-8  justify-left">BREADCRUMBS > GO > HERE</div>
+      <div id='breadcrumbs' class="d-none d-lg-block col-8  justify-left">BREADCRUMBS > GO > HERE</div>
     </div>
     <div id='main' class="row justify-content-center">
         <!-- banner -->
@@ -187,11 +197,11 @@
   <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
   <!-- load services -->
   {{#if env_production }}
-  <script src='http://trail-env.8jhbbn2nrv.us-west-2.elasticbeanstalk.com/app.js'></script>
+  <!-- <script src='http://trail-env.8jhbbn2nrv.us-west-2.elasticbeanstalk.com/app.js'></script>
   <script src='http://profile-service.be6c6ztrma.us-west-2.elasticbeanstalk.com/app.js'></script>
   <script src='http://trail-photos-service-dev.us-west-1.elasticbeanstalk.com/app.js'></script>
   <script src='http://reviewservice.jsxvmg3wq3.us-west-1.elasticbeanstalk.com/app.js'></script>
-  <script src='http://ec2-54-172-80-40.compute-1.amazonaws.com/app.js'></script>
+  <script src='http://ec2-54-172-80-40.compute-1.amazonaws.com/app.js'></script> -->
   {{else}}
   <script src='http://localhost:3001/app.js'></script>
   <script src='http://localhost:3002/app.js'></script>
