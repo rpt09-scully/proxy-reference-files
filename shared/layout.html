@@ -19,7 +19,7 @@
 </head>
 
 <body>
-  <div class="container">
+  <div class="container-fluid">
     <div id='menu' class="row justify-content-center">
       <ul id='menu_left' class='row flex-row justify-content-around col-sm-12 col-md-5 col-lg-4 text-left'> 
         <li><a href='#'>Explore</a></li>
@@ -55,7 +55,8 @@
               <p>Other stuff</p>
             </div>
           </div>
-          <!-- little bubble badges-->
+        </div>
+        <div class='max-width row flex-row no-gutters justify-content-center'>
           <div id='bubble_menu' class='row flex-row justify-content-around'>
             <div class='bubble'></div>
             <div class='bubble'></div>
@@ -64,110 +65,110 @@
             <div class='bubble d-none d-lg-flex'></div>
             <div class='bubble'></div>
           </div>
-        </div>
-        <!-- the guts -->
-        <div id='main_content' class='row col-12 justify-content-left'>
-          <div class='left_col col-sm-12 col-md-6 col-lg-8'>
-            <div class='wrapper'>
-              <!-- description tags etc -->
-              <div id='9Trails.TrailService.TrailDescription' class='servicePlaceholder row flex-row justify-content-center align-items-center'>
-                <h5>trail description + tags</h5>
-              </div>
-            </div> <!-- end wrapper -->
-          </div>
-          <div class='right_col col-sm-12 col-md-6 col-lg-4'>
-            <div class='wrapper'>
-              <!-- path (canonical) -->
-              <div id='9Trails.PathsService.CanonicalPath' class='widgetWrapper row flex-row'>
-                  <h5>map/path </h5>
-              </div>
-              <!-- user stats -->
-              <div id='user stats' class='servicePlaceholder row flex-row justify-content-center align-items-center'>
-                  <div id='9Trails.ProfileService.Profile'>
-                    <h5>user stats </h5>
-                  </div>
+          <!-- the guts -->
+          <div id='main_content' class='row col-12 justify-content-left'>
+            <div class='left_col col-sm-12 col-md-6 col-lg-8'>
+              <div class='wrapper'>
+                <!-- description tags etc -->
+                <div id='9Trails.TrailService.TrailDescription' class='row flex-row justify-content-center align-items-center'>
+                  <h5>trail description + tags</h5>
+                </div>
+              </div> <!-- end wrapper -->
+            </div>
+            <div class='right_col col-sm-12 col-md-6 col-lg-4'>
+              <div class='wrapper'>
+                <!-- path (canonical) -->
+                <div id='9Trails.PathsService.CanonicalPath' class='widgetWrapper row flex-row'>
+                    <h5>map/path </h5>
+                </div>
+                <!-- user stats -->
+                <div id='user stats' class='row flex-row justify-content-center align-items-center'>
+                    <div id='9Trails.ProfileService.Profile'>
+                      <h5>user stats </h5>
+                    </div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div id='tab_content' class='col-sm-12 col-md-6 col-lg-8'>
-            <!-- tab time -->
-            <nav>
-              <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                <a class="nav-item nav-link active" id="nav-reviews-tab" data-toggle="tab" href="#nav-reviews" role="tab" aria-controls="nav-reviews" aria-selected="true">Reviews</a>
-                <a class="nav-item nav-link" id="nav-photos-tab" data-toggle="tab" href="#nav-photos" role="tab" aria-controls="nav-photos" aria-selected="false">Photos</a>
-                <a class="nav-item nav-link" id="nav-recordings-tab" data-toggle="tab" href="#nav-recordings" role="tab" aria-controls="nav-recordings" aria-selected="false">Recordings</a>
-              </div>
-            </nav>
-            <div class="tab-content" id="nav-tabContent">
-              <!-- reviews -->
-              <div class="tab-pane fade show active" id="nav-reviews" role="tabpanel" aria-labelledby="nav-reviews-tab">
-                <!-- TODO: ryan change this and push to a namespaced thing -->
-                <div id='9Trails.ReviewService.ReviewModule'>
-                  <h2> Wow Reviews! </h2>
-                  <div class='servicePlaceholder row flex-row justify-content-center align-items-center'>
-                      <h5>review 1 </h5>
+          <div id='tab_content' class='col-sm-12 col-md-6 col-lg-8'>
+              <!-- tab time -->
+              <nav>
+                <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                  <a class="nav-item nav-link active" id="nav-reviews-tab" data-toggle="tab" href="#nav-reviews" role="tab" aria-controls="nav-reviews" aria-selected="true">Reviews</a>
+                  <a class="nav-item nav-link" id="nav-photos-tab" data-toggle="tab" href="#nav-photos" role="tab" aria-controls="nav-photos" aria-selected="false">Photos</a>
+                  <a class="nav-item nav-link" id="nav-recordings-tab" data-toggle="tab" href="#nav-recordings" role="tab" aria-controls="nav-recordings" aria-selected="false">Recordings</a>
+                </div>
+              </nav>
+              <div class="tab-content" id="nav-tabContent">
+                <!-- reviews -->
+                <div class="tab-pane fade show active" id="nav-reviews" role="tabpanel" aria-labelledby="nav-reviews-tab">
+                  <!-- TODO: ryan change this and push to a namespaced thing -->
+                  <div id='9Trails.ReviewService.ReviewModule'>
+                    <h2> Wow Reviews! </h2>
+                    <div class='servicePlaceholder row flex-row justify-content-center align-items-center'>
+                        <h5>review 1 </h5>
+                    </div>
+                    <div class='servicePlaceholder row flex-row justify-content-center align-items-center'>
+                        <h5>review 2 </h5>
+                    </div>
+                    <div class='servicePlaceholder row flex-row justify-content-center align-items-center'>
+                        <h5>review 3 </h5>
+                    </div>
+                    <div class='servicePlaceholder row flex-row justify-content-center align-items-center'>
+                        <h5>review 4 </h5>
+                    </div>
+                    <div class='servicePlaceholder row flex-row justify-content-center align-items-center'>
+                        <h5>review 5 </h5>
+                    </div>
                   </div>
-                  <div class='servicePlaceholder row flex-row justify-content-center align-items-center'>
-                      <h5>review 2 </h5>
+                </div>
+                <!-- photos -->
+                <div class="tab-pane fade" id="nav-photos" role="tabpanel" aria-labelledby="nav-photos-tab">
+                <div id='9Trails.TrailPhotosService.App'>
+                    <h2> Wow Photos! </h2>
+                    <div class='servicePlaceholder row flex-row justify-content-center align-items-center'>
+                        <h5>photos 1 </h5>
+                    </div>
+                    <div class='servicePlaceholder row flex-row justify-content-center align-items-center'>
+                        <h5>photos 2 </h5>
+                    </div>
+                    <div class='servicePlaceholder row flex-row justify-content-center align-items-center'>
+                        <h5>photos 3 </h5>
+                    </div>
+                    <div class='servicePlaceholder row flex-row justify-content-center align-items-center'>
+                        <h5>photos 4 </h5>
+                    </div>
+                    <div class='servicePlaceholder row flex-row justify-content-center align-items-center'>
+                        <h5>photos 5 </h5>
+                    </div>
                   </div>
-                  <div class='servicePlaceholder row flex-row justify-content-center align-items-center'>
-                      <h5>review 3 </h5>
-                  </div>
-                  <div class='servicePlaceholder row flex-row justify-content-center align-items-center'>
-                      <h5>review 4 </h5>
-                  </div>
-                  <div class='servicePlaceholder row flex-row justify-content-center align-items-center'>
-                      <h5>review 5 </h5>
+                </div>
+                <!-- recordings -->
+                <div class="tab-pane fade" id="nav-recordings" role="tabpanel" aria-labelledby="nav-recordings-tab">
+                  <div id='9Trails.PathsService.Recordings'>
+                    <h2> Wow Recordings! </h2>
+                    <div class='servicePlaceholder row flex-row justify-content-center align-items-center'>
+                        <h5>recording 1 </h5>
+                    </div>
+                    <div class='servicePlaceholder row flex-row justify-content-center align-items-center'>
+                        <h5>recording 2 </h5>
+                    </div>
+                    <div class='servicePlaceholder row flex-row justify-content-center align-items-center'>
+                        <h5>recording 3 </h5>
+                    </div>
+                    <div class='servicePlaceholder row flex-row justify-content-center align-items-center'>
+                        <h5>recording 4 </h5>
+                    </div>
+                    <div class='servicePlaceholder row flex-row justify-content-center align-items-center'>
+                        <h5>recording 5 </h5>
+                    </div>
                   </div>
                 </div>
               </div>
-              <!-- photos -->
-              <div class="tab-pane fade" id="nav-photos" role="tabpanel" aria-labelledby="nav-photos-tab">
-               <div id='9Trails.TrailPhotosService.App'>
-                  <h2> Wow Photos! </h2>
-                  <div class='servicePlaceholder row flex-row justify-content-center align-items-center'>
-                      <h5>photos 1 </h5>
-                  </div>
-                  <div class='servicePlaceholder row flex-row justify-content-center align-items-center'>
-                      <h5>photos 2 </h5>
-                  </div>
-                  <div class='servicePlaceholder row flex-row justify-content-center align-items-center'>
-                      <h5>photos 3 </h5>
-                  </div>
-                  <div class='servicePlaceholder row flex-row justify-content-center align-items-center'>
-                      <h5>photos 4 </h5>
-                  </div>
-                  <div class='servicePlaceholder row flex-row justify-content-center align-items-center'>
-                      <h5>photos 5 </h5>
-                  </div>
-                </div>
-              </div>
-              <!-- recordings -->
-              <div class="tab-pane fade" id="nav-recordings" role="tabpanel" aria-labelledby="nav-recordings-tab">
-                <div id='9Trails.PathsService.Recordings'>
-                  <h2> Wow Recordings! </h2>
-                  <div class='servicePlaceholder row flex-row justify-content-center align-items-center'>
-                      <h5>recording 1 </h5>
-                  </div>
-                  <div class='servicePlaceholder row flex-row justify-content-center align-items-center'>
-                      <h5>recording 2 </h5>
-                  </div>
-                  <div class='servicePlaceholder row flex-row justify-content-center align-items-center'>
-                      <h5>recording 3 </h5>
-                  </div>
-                  <div class='servicePlaceholder row flex-row justify-content-center align-items-center'>
-                      <h5>recording 4 </h5>
-                  </div>
-                  <div class='servicePlaceholder row flex-row justify-content-center align-items-center'>
-                      <h5>recording 5 </h5>
-                  </div>
-                </div>
-              </div>
-            </div>
-        </div>
-        <div class='col-sm-12 col-md-6 col-lg-4'>
-          <!-- not sure what would go here actually..-->
+          </div>
+          <div class='col-sm-12 col-md-6 col-lg-4'>
+            <!-- not sure what would go here actually..-->
+          </div>
         </div>
     </div>
   </div> 
