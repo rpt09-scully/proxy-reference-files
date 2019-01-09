@@ -4,7 +4,7 @@
 # put services here!
 ../../../trail-service > npm run server-dev
 ../../../profile-service > npm start
-../../../trail-photos-service > npm start-dev
+../../../trail-photos-service > npm start
 ../../../reviews-service > npm run server-dev
 ../../../paths-service > npm run server-dev
 
