@@ -47,6 +47,14 @@ body {
   display: inline-block;
 }
 
+#menu li a{
+  color: #333;
+}
+#menu li a:hover {
+ text-decoration: none;
+ color: #ed4d4d;
+}
+
 #menu_left li {
   padding-right: 1rem;
 }
@@ -70,9 +78,22 @@ body {
   padding-right: 0px;
 }
 
+#search_bar_wpr input {
+  padding: .5rem;
+  border: none;
+  border-radius: .5rem;
+  background: #f7f7f7;
+}
+
 .icon {
   font-size: 1.5rem;
   padding: 0 .5rem;
+  color: #666;
+}
+
+.icon:hover {
+  color: #ed4d4d;
+  cursor: pointer;
 }
 
 #main {
@@ -82,6 +103,7 @@ body {
 
 #breadcrumbs {
   margin-bottom: 1rem;
+  margin-left: 1rem;
 }
 /* components */
 
@@ -109,10 +131,24 @@ body {
 #bubble_menu .bubble {
   width: 60px;
   height: 60px;
-  transform: translateY(50%);
+  transform: translateY(50%) scale(1.0);
   border-radius: 50%;
-  background: #dfdfdf;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  color: #666;
+  background: #f2f2f2;
+  transition: transform .25s ease-in-out;
 }
+
+#bubble_menu .bubble:hover {
+  color: #ed4d4d;
+  background: #f4f4f4;
+  cursor: pointer;
+  transform: translateY(50%) scale(1.2);
+}
+
 
 
 
