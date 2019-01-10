@@ -18,6 +18,9 @@
 </head>
 
 <body>
+  <div class='NT-loading'>
+    <div class='loading-text'><img src='https://s3.amazonaws.com/9trails-gpx/general/loading_spinner.gif'></div>
+  </div>
   <div class="container-fluid">
     <div id='menu' class="row justify-content-center">
       <div id='menu_left' class='row flex-row col-4 col-md-5 text-left'> 
@@ -210,39 +213,7 @@
   <script src='http://localhost:3005/app.js'></script>
   {{/if}}
   <!-- DOM that -->
-    <script>
-    // if properly namespaced the DOM insertion is automated!
-    Object.keys(window.NT).forEach((serviceKey) => {
-      // now get service object
-      Object.keys(window.NT[serviceKey]).forEach((widgetKey) => {
-        try {
-          const dom_id = `9Trails.${serviceKey}.${widgetKey}`;
-          const currentWidget = window.NT[serviceKey][widgetKey];
-          ReactDOM.render(React.createElement(currentWidget), document.getElementById(dom_id));
-          // success
-          console.log(`
-          /////////////////////////////////////////////////////
-
-          ✅ ${serviceKey}.${widgetKey}
-          
-          /////////////////////////////////////////////////////
-          `);
-        } catch (e) {
-          // error 
-          console.log(`
-          /////////////////////////////////////////////////////
-
-          ❌ ${serviceKey}.${widgetKey}
-          An error occurred: ${e}
-          
-          /////////////////////////////////////////////////////
-          `);
-          // output
-          console.error( `Error for ${serviceKey}.${widgetKey}`, e);
-        }
-      });
-    });
-  </script>
+  <script src='js/app.js'></script>
 </body>
 
 </html>

@@ -15,8 +15,31 @@
 
 body {
   background-color: #fff;
+  font-size: 14px;
 }
 
+.NT-loading { 
+  width: 100%;
+  position: fixed;
+  background: #fff;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+  transition: opacity .5s ease-in-out;
+  font-size: 3rem;
+}
+
+.NT-loading img {
+  max-width: 100px;;
+}
+.NT-loading.fadeOut {
+  opacity: 0;
+}
 .container-fluid {
   background: #fff;
   min-height: 100vh;
@@ -199,7 +222,6 @@ body {
   margin-bottom: 20px;
 }
 
-
 /* Small devices exclusive (landscape phones, 576px and up) */
 @media (max-width: 767px) {
   .mobile-and-lower {
@@ -220,6 +242,7 @@ body {
   .right_col {
     position: absolute;
     right: 15px;
+    z-index: 2;
   }
 
   .tablet {
